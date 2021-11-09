@@ -12,18 +12,20 @@ namespace ParcialParadigmas
 {
     public partial class home : Form
     {
-        
-        
+        Parqueadero generar = new Parqueadero();
+
         public home()
         {
             InitializeComponent();
+            
+            generar.GenerarParkingSpot();
         }
-
+        
         private void home_Load(object sender, EventArgs e)
         {
             
         }
-        int i = 0;
+        
         private void btnRotarIzquierda_Click(object sender, EventArgs e)
         {
             var btnX = btnE1.Location.X;
@@ -64,7 +66,7 @@ namespace ParcialParadigmas
 
         private void label9_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,73 +74,245 @@ namespace ParcialParadigmas
             txtIndetificacion.Clear();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        public void btnAgregar_Click(object sender, EventArgs e)
         {
-            Parqueadero generar = new Parqueadero();
-            generar.GenerarParkingSpot();
+            if (generar.VerificarDisponibilidad() == false) {
+                var t = cmbTipo.Text;
+                var m = txtMarca.Text;
+                var p = txtPlaca.Text;
+                var di = txtIndetificacion.Text;
+                var s = "";
+                var ho = radHombre.Checked;
+                var mu = radMujer.Checked;
+                var a = "";
+                var afi = cheAfiliado.Checked;
+                if (afi)
+                {
+                    a = " y que esta afiliado";
 
+                }
+                if (ho)
+                {
+                    s = "masculino";
 
-            txtPlaca.Clear();
-            txtMarca.Clear();
-            txtIndetificacion.Clear();
-            var t = cmbTipo.Text;
-            var m = txtMarca.Text;
-            var p = txtPlaca.Text;
-            var i = txtIndetificacion.Text;
-            var s = "";
-            var ho = radHombre.Checked;
-            var mu = radMujer.Checked;
-            var a = "";
-            var afi = cheAfiliado.Checked;
-            if (afi)
-            {
-                a = "y que esta afiliado";
+                }
+                if (mu)
+                {
+                    s = "femnino";
 
+                }
+                string DatosVehiculo = t + " de marca " + m + " con placa " + p;
+                string DatosConductor= " conductor con cc= " + di + " de sexo " + s + a;
+                string textosalida = DatosVehiculo + " y " + DatosConductor+ "\n";
+                rtbInfo.Text += textosalida;
+
+                //if(espacios[1].disponibilidad=false{btnE1.color red}
+
+                txtPlaca.Clear();
+                txtMarca.Clear();
+                txtIndetificacion.Clear();
+                bool espacioLleno = false;
+                while (espacioLleno == false)
+                {
+                    foreach (ParkingSpot x in generar.Espacios)
+                    {
+                        if (x.Disponible == true && espacioLleno == false)
+                        {
+                            x.Numerodeestacionamiento = generar.Espacios.IndexOf(x);
+                            x.DatosVehiculoYConductor = textosalida;
+                            x.Disponible = false;
+                            espacioLleno = true;
+                            rtbInfo.Text += "ubicado en el estacionamiento  numero " + (generar.Espacios.IndexOf(x)+1)+ "\n";
+                        }
+                        if (generar.Espacios[0].Disponible == false){ 
+                            btnE1.BackColor = Color.Red; 
+                        }
+                        if (generar.Espacios[1].Disponible == false)
+                        {
+                            btnE2.BackColor = Color.Red;
+                        }
+                        if (generar.Espacios[2].Disponible == false)
+                        {
+                            btnE3.BackColor = Color.Red;
+                        }
+                        if (generar.Espacios[3].Disponible == false)
+                        {
+                            btnE4.BackColor = Color.Red;
+                        }
+                        if (generar.Espacios[4].Disponible == false)
+                        {
+                            btnE5.BackColor = Color.Red;
+                        }
+                        if (generar.Espacios[5].Disponible == false)
+                        {
+                            btnE6.BackColor = Color.Red;
+                        }
+                        if (generar.Espacios[6].Disponible == false)
+                        {
+                            btnE7.BackColor = Color.Red;
+                        }
+                        if (generar.Espacios[7].Disponible == false)
+                        {
+                            btnE8.BackColor = Color.Red;
+                        }
+                        if (generar.Espacios[8].Disponible == false)
+                        {
+                            btnE9.BackColor = Color.Red;
+                        }
+                        if (generar.Espacios[9].Disponible == false)
+                        {
+                            btnE10.BackColor = Color.Red;
+                        }
+                    }
+                    
+                }
             }
-            if (ho)
+            else
             {
-                s= "masculino";
-
+                lblNoHayEspacio.Show();
             }
-            if (mu)
-            {
-                s = "femnino";
-
-            }
-
-            a+= "el " + t + " de marca " + m + "con placa " + p + "del propietario con cc= " + i + " de sexo " + s + a;
             
             
+        }
+
+        private void btnE1_Click(object sender, EventArgs e)
+        {
+            generar.Espacios[0].Disponible = true;
+            generar.VerificarDisponibilidad();
+            btnE1.BackColor = Color.Green;
+            lblNoHayEspacio.Hide();
+            
+        }
+
+        private void btnE2_Click_1(object sender, EventArgs e)
+        {
+            generar.Espacios[1].Disponible = true;
+            generar.VerificarDisponibilidad();
+            btnE2.BackColor = Color.Green;
+            lblNoHayEspacio.Hide();
+        }
+
+        private void btnE3_Click_1(object sender, EventArgs e)
+        {
+            generar.Espacios[2].Disponible = true;
+            generar.VerificarDisponibilidad();
+            btnE3.BackColor = Color.Green;
+            lblNoHayEspacio.Hide();
+        }
+
+        private void btnE4_Click(object sender, EventArgs e)
+        {
+            generar.Espacios[3].Disponible = true;
+            generar.VerificarDisponibilidad();
+            btnE4.BackColor = Color.Green;
+            lblNoHayEspacio.Hide();
+        }
+
+        private void btnE5_Click_1(object sender, EventArgs e)
+        {
+            generar.Espacios[4].Disponible = true;
+            generar.VerificarDisponibilidad();
+            btnE5.BackColor = Color.Green;
+            lblNoHayEspacio.Hide();
+        }
+
+        private void btnE6_Click_1(object sender, EventArgs e)
+        {
+            generar.Espacios[5].Disponible = true;
+            generar.VerificarDisponibilidad();
+            btnE6.BackColor = Color.Green;
+            lblNoHayEspacio.Hide();
+
+        }
+
+        private void btnE7_Click_1(object sender, EventArgs e)
+        {
+            generar.Espacios[6].Disponible = true;
+            generar.VerificarDisponibilidad();
+            btnE7.BackColor = Color.Green;
+            lblNoHayEspacio.Hide();
+
+        }
+
+        private void btnE8_Click_1(object sender, EventArgs e)
+        {
+            generar.Espacios[7].Disponible = true;
+            generar.VerificarDisponibilidad();
+            btnE8.BackColor = Color.Green;
+            lblNoHayEspacio.Hide();
+        }
+
+        private void btnE9_Click_1(object sender, EventArgs e)
+        {
+            generar.Espacios[8].Disponible = true;
+            generar.VerificarDisponibilidad();
+            btnE9.BackColor = Color.Green;
+            lblNoHayEspacio.Hide();
+        }
+
+        private void btnE10_Click_1(object sender, EventArgs e)
+        {
+            generar.Espacios[9].Disponible = true;
+            generar.VerificarDisponibilidad();
+            btnE10.BackColor = Color.Green;
+            lblNoHayEspacio.Hide();
         }
     }
 
     public class Parqueadero
     {
         
+        public Parqueadero()
+        {
+            GenerarParkingSpot();
+        }
         public int Capcidad { get; set; }
         public int Disponibles { get; set; }
         public int Ocupados{ get; set; }
-    List<ParkingSpot> Espacios = new List<ParkingSpot>();
+        public List<ParkingSpot> Espacios = new List<ParkingSpot>();
         
 
         public void GenerarParkingSpot()
         {
-            for (int i = 0; i <= 9; i++)
+            for (int i = 0; i <= 9; i+=1)
             {
                 Espacios.Add(new ParkingSpot());
             }
            
-            Espacios[0].Disponible=true;
-           //sirve para generar los Parking Spots del parqueadero
+              //sirve para generar los Parking Spots del parqueadero
         }
-        public void VerificarDisponibilidad() {
         
+        public bool VerificarDisponibilidad() {
+            bool nohaydisponibilidad=false;
+            for (int i = 0; i <= 9; i+=1)
+            {
+                if (Espacios[i].Disponible == true)
+                {
+                    nohaydisponibilidad = false;
+                }
+                else //i==9 && Espacios[i].Disponible==false
+                {
+                    nohaydisponibilidad = true;
+                }
+                
+            }
+            return nohaydisponibilidad;
+           
             //sirvira para verificar la disponibilidad de un espacio
-        //ej: if espacio1 or espacio2 or espacio3 ... disponibilidad= true, seguir con el metodo AsignarParkingSpot()
-        //ej: if espacio1 or espacio2 or espacio3 ... disponibilidad= false envar mensaje "no hay espacios disponibles"
-        
+            //ej: if espacio1 or espacio2 or espacio3 ... disponibilidad= true, seguir con el metodo AsignarParkingSpot()
+            //ej: if espacio1 or espacio2 or espacio3 ... disponibilidad= false envar mensaje "no hay espacios disponibles"
+
         }
         public void AsignarParkingSpot()
+        {
+            
+            //sirvira para asignar un carro a un determinado espacio disponible
+            //como se dijo en el pdf se a se asigna el punto de parqueo más cercano en la banda que este vacio 
+            //ej: if espacio1.Disponible= true, asignar carro a espacio1
+            //luego se ingresara a ese veiculo
+
+        }
+        public void DenegarPorFaltaDeEspacio()
         {
             //sirvira para asignar un carro a un determinado espacio disponible
             //como se dijo en el pdf se a se asigna el punto de parqueo más cercano en la banda que este vacio 
@@ -146,18 +320,24 @@ namespace ParcialParadigmas
             //luego se ingresara a ese veiculo
 
         }
-        
 
 
     }
     public class ParkingSpot
     {
+        public ParkingSpot()
+        {
+            this.Disponible=true;
+        }
+
         public bool Disponible { get; set; }
         public int Numerodeestacionamiento { get; set; }
-        public string DatosVehiculoYconductor{ get; set; }
+        public string DatosVehiculoYConductor{ get; set; }
 
         public void IngresarVehiculo()
         {
+            
+            
             //sirvira para ingresar el vehiculo a un determinado estacionamiento y que el espacio de esta se marque en ocupado
         }
         public void RetirarrVehiculo()
@@ -170,6 +350,8 @@ namespace ParcialParadigmas
         string Tipo;
         string Placa;
         string Marca;
+        string HoraEntrada;
+        string HoraSalida;
         
     }
     public class driver

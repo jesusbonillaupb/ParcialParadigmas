@@ -57,8 +57,18 @@ namespace ParcialParadigmas
             this.radHombre = new System.Windows.Forms.RadioButton();
             this.radMujer = new System.Windows.Forms.RadioButton();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.rtbDatos = new System.Windows.Forms.RichTextBox();
             this.cheAfiliado = new System.Windows.Forms.CheckBox();
+            this.lblNoHayEspacio = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.rtbInfo = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,93 +84,123 @@ namespace ParcialParadigmas
             // 
             // btnE1
             // 
+            this.btnE1.BackColor = System.Drawing.Color.Green;
+            this.btnE1.ForeColor = System.Drawing.Color.White;
             this.btnE1.Location = new System.Drawing.Point(693, 200);
             this.btnE1.Name = "btnE1";
             this.btnE1.Size = new System.Drawing.Size(42, 42);
             this.btnE1.TabIndex = 1;
             this.btnE1.Text = "1";
-            this.btnE1.UseVisualStyleBackColor = true;
+            this.btnE1.UseVisualStyleBackColor = false;
+            this.btnE1.Click += new System.EventHandler(this.btnE1_Click);
             // 
             // btnE2
             // 
+            this.btnE2.BackColor = System.Drawing.Color.Green;
+            this.btnE2.ForeColor = System.Drawing.Color.White;
             this.btnE2.Location = new System.Drawing.Point(693, 270);
             this.btnE2.Name = "btnE2";
             this.btnE2.Size = new System.Drawing.Size(42, 42);
             this.btnE2.TabIndex = 2;
             this.btnE2.Text = "2";
-            this.btnE2.UseVisualStyleBackColor = true;
+            this.btnE2.UseVisualStyleBackColor = false;
+            this.btnE2.Click += new System.EventHandler(this.btnE2_Click_1);
             // 
             // btnE3
             // 
+            this.btnE3.BackColor = System.Drawing.Color.Green;
+            this.btnE3.ForeColor = System.Drawing.Color.White;
             this.btnE3.Location = new System.Drawing.Point(693, 340);
             this.btnE3.Name = "btnE3";
             this.btnE3.Size = new System.Drawing.Size(42, 42);
             this.btnE3.TabIndex = 3;
             this.btnE3.Text = "3";
-            this.btnE3.UseVisualStyleBackColor = true;
+            this.btnE3.UseVisualStyleBackColor = false;
+            this.btnE3.Click += new System.EventHandler(this.btnE3_Click_1);
             // 
             // btnE7
             // 
+            this.btnE7.BackColor = System.Drawing.Color.Green;
+            this.btnE7.ForeColor = System.Drawing.Color.White;
             this.btnE7.Location = new System.Drawing.Point(903, 270);
             this.btnE7.Name = "btnE7";
             this.btnE7.Size = new System.Drawing.Size(42, 42);
             this.btnE7.TabIndex = 4;
             this.btnE7.Text = "7";
-            this.btnE7.UseVisualStyleBackColor = true;
+            this.btnE7.UseVisualStyleBackColor = false;
+            this.btnE7.Click += new System.EventHandler(this.btnE7_Click_1);
             // 
             // btnE6
             // 
+            this.btnE6.BackColor = System.Drawing.Color.Green;
+            this.btnE6.ForeColor = System.Drawing.Color.White;
             this.btnE6.Location = new System.Drawing.Point(903, 340);
             this.btnE6.Name = "btnE6";
             this.btnE6.Size = new System.Drawing.Size(42, 42);
             this.btnE6.TabIndex = 5;
             this.btnE6.Text = "6";
-            this.btnE6.UseVisualStyleBackColor = true;
+            this.btnE6.UseVisualStyleBackColor = false;
+            this.btnE6.Click += new System.EventHandler(this.btnE6_Click_1);
             // 
             // btnE5
             // 
+            this.btnE5.BackColor = System.Drawing.Color.Green;
+            this.btnE5.ForeColor = System.Drawing.Color.White;
             this.btnE5.Location = new System.Drawing.Point(833, 340);
             this.btnE5.Name = "btnE5";
             this.btnE5.Size = new System.Drawing.Size(42, 42);
             this.btnE5.TabIndex = 6;
             this.btnE5.Text = "5";
-            this.btnE5.UseVisualStyleBackColor = true;
+            this.btnE5.UseVisualStyleBackColor = false;
+            this.btnE5.Click += new System.EventHandler(this.btnE5_Click_1);
             // 
             // btnE8
             // 
+            this.btnE8.BackColor = System.Drawing.Color.Green;
+            this.btnE8.ForeColor = System.Drawing.Color.White;
             this.btnE8.Location = new System.Drawing.Point(903, 200);
             this.btnE8.Name = "btnE8";
             this.btnE8.Size = new System.Drawing.Size(42, 42);
             this.btnE8.TabIndex = 7;
             this.btnE8.Text = "8";
-            this.btnE8.UseVisualStyleBackColor = true;
+            this.btnE8.UseVisualStyleBackColor = false;
+            this.btnE8.Click += new System.EventHandler(this.btnE8_Click_1);
             // 
             // btnE9
             // 
+            this.btnE9.BackColor = System.Drawing.Color.Green;
+            this.btnE9.ForeColor = System.Drawing.Color.White;
             this.btnE9.Location = new System.Drawing.Point(833, 200);
             this.btnE9.Name = "btnE9";
             this.btnE9.Size = new System.Drawing.Size(42, 42);
             this.btnE9.TabIndex = 8;
             this.btnE9.Text = "9";
-            this.btnE9.UseVisualStyleBackColor = true;
+            this.btnE9.UseVisualStyleBackColor = false;
+            this.btnE9.Click += new System.EventHandler(this.btnE9_Click_1);
             // 
             // btnE4
             // 
+            this.btnE4.BackColor = System.Drawing.Color.Green;
+            this.btnE4.ForeColor = System.Drawing.Color.White;
             this.btnE4.Location = new System.Drawing.Point(763, 340);
             this.btnE4.Name = "btnE4";
             this.btnE4.Size = new System.Drawing.Size(42, 42);
             this.btnE4.TabIndex = 10;
             this.btnE4.Text = "4";
-            this.btnE4.UseVisualStyleBackColor = true;
+            this.btnE4.UseVisualStyleBackColor = false;
+            this.btnE4.Click += new System.EventHandler(this.btnE4_Click);
             // 
             // btnE10
             // 
+            this.btnE10.BackColor = System.Drawing.Color.Green;
+            this.btnE10.ForeColor = System.Drawing.Color.White;
             this.btnE10.Location = new System.Drawing.Point(763, 200);
             this.btnE10.Name = "btnE10";
             this.btnE10.Size = new System.Drawing.Size(42, 42);
             this.btnE10.TabIndex = 11;
             this.btnE10.Text = "10";
-            this.btnE10.UseVisualStyleBackColor = true;
+            this.btnE10.UseVisualStyleBackColor = false;
+            this.btnE10.Click += new System.EventHandler(this.btnE10_Click_1);
             // 
             // btnRotarIzquierda
             // 
@@ -278,7 +318,7 @@ namespace ParcialParadigmas
             // 
             // desocupar
             // 
-            this.desocupar.Location = new System.Drawing.Point(225, 446);
+            this.desocupar.Location = new System.Drawing.Point(187, 446);
             this.desocupar.Name = "desocupar";
             this.desocupar.Size = new System.Drawing.Size(75, 23);
             this.desocupar.TabIndex = 26;
@@ -320,21 +360,13 @@ namespace ParcialParadigmas
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(336, 446);
+            this.btnAgregar.Location = new System.Drawing.Point(303, 446);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 34;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // rtbDatos
-            // 
-            this.rtbDatos.Location = new System.Drawing.Point(435, 693);
-            this.rtbDatos.Name = "rtbDatos";
-            this.rtbDatos.Size = new System.Drawing.Size(534, 120);
-            this.rtbDatos.TabIndex = 36;
-            this.rtbDatos.Text = "";
             // 
             // cheAfiliado
             // 
@@ -346,13 +378,122 @@ namespace ParcialParadigmas
             this.cheAfiliado.Text = "afiliado";
             this.cheAfiliado.UseVisualStyleBackColor = true;
             // 
+            // lblNoHayEspacio
+            // 
+            this.lblNoHayEspacio.AutoSize = true;
+            this.lblNoHayEspacio.BackColor = System.Drawing.Color.Red;
+            this.lblNoHayEspacio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoHayEspacio.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblNoHayEspacio.Location = new System.Drawing.Point(183, 495);
+            this.lblNoHayEspacio.Name = "lblNoHayEspacio";
+            this.lblNoHayEspacio.Size = new System.Drawing.Size(270, 20);
+            this.lblNoHayEspacio.TabIndex = 38;
+            this.lblNoHayEspacio.Text = "No hay estacionamientos disponibles";
+            this.lblNoHayEspacio.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(465, 298);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 13);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "hora entrada";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(452, 340);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(35, 20);
+            this.textBox1.TabIndex = 40;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(513, 340);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(35, 20);
+            this.textBox2.TabIndex = 41;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(493, 338);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(14, 20);
+            this.label10.TabIndex = 42;
+            this.label10.Text = ":";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(465, 386);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 13);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "hora salida";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(452, 426);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(35, 20);
+            this.textBox3.TabIndex = 44;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(493, 426);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(14, 20);
+            this.label12.TabIndex = 45;
+            this.label12.Text = ":";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(513, 429);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(35, 20);
+            this.textBox4.TabIndex = 46;
+            this.textBox4.Text = " ";
+            // 
+            // rtbInfo
+            // 
+            this.rtbInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbInfo.Location = new System.Drawing.Point(216, 563);
+            this.rtbInfo.Name = "rtbInfo";
+            this.rtbInfo.Size = new System.Drawing.Size(694, 96);
+            this.rtbInfo.TabIndex = 47;
+            this.rtbInfo.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(513, 455);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 586);
+            this.BackColor = System.Drawing.Color.OldLace;
+            this.ClientSize = new System.Drawing.Size(1191, 675);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rtbInfo);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblNoHayEspacio);
             this.Controls.Add(this.cheAfiliado);
-            this.Controls.Add(this.rtbDatos);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.radMujer);
             this.Controls.Add(this.radHombre);
@@ -390,37 +531,46 @@ namespace ParcialParadigmas
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnE1;
-        private System.Windows.Forms.Button btnE2;
-        private System.Windows.Forms.Button btnE3;
-        private System.Windows.Forms.Button btnE7;
-        private System.Windows.Forms.Button btnE6;
-        private System.Windows.Forms.Button btnE5;
-        private System.Windows.Forms.Button btnE8;
-        private System.Windows.Forms.Button btnE9;
-        private System.Windows.Forms.Button btnE4;
-        private System.Windows.Forms.Button btnE10;
-        private System.Windows.Forms.Button btnRotarIzquierda;
-        private System.Windows.Forms.Button btnRotarDerecha;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbTipo;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.TextBox txtPlaca;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtIndetificacion;
-        private System.Windows.Forms.Button desocupar;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radHombre;
-        private System.Windows.Forms.RadioButton radMujer;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.RichTextBox rtbDatos;
-        private System.Windows.Forms.CheckBox cheAfiliado;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnE1;
+        public System.Windows.Forms.Button btnE2;
+        public System.Windows.Forms.Button btnE3;
+        public System.Windows.Forms.Button btnE7;
+        public System.Windows.Forms.Button btnE6;
+        public System.Windows.Forms.Button btnE5;
+        public System.Windows.Forms.Button btnE8;
+        public System.Windows.Forms.Button btnE9;
+        public System.Windows.Forms.Button btnE4;
+        public System.Windows.Forms.Button btnE10;
+        public System.Windows.Forms.Button btnRotarIzquierda;
+        public System.Windows.Forms.Button btnRotarDerecha;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ComboBox cmbTipo;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox txtMarca;
+        public System.Windows.Forms.TextBox txtPlaca;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.TextBox txtIndetificacion;
+        public System.Windows.Forms.Button desocupar;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.RadioButton radHombre;
+        public System.Windows.Forms.RadioButton radMujer;
+        public System.Windows.Forms.Button btnAgregar;
+        public System.Windows.Forms.CheckBox cheAfiliado;
+        public System.Windows.Forms.Label lblNoHayEspacio;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.RichTextBox rtbInfo;
+        private System.Windows.Forms.Button button1;
     }
 }
 
