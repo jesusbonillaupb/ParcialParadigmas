@@ -57,16 +57,9 @@ namespace ParcialParadigmas
             this.btnAgregar = new System.Windows.Forms.Button();
             this.cheAfiliado = new System.Windows.Forms.CheckBox();
             this.lblNoHayEspacio = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.rtbInfo = new System.Windows.Forms.RichTextBox();
             this.btnMostrarE = new System.Windows.Forms.Button();
+            this.rtbEs = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -370,77 +363,10 @@ namespace ParcialParadigmas
             this.lblNoHayEspacio.Text = "No hay estacionamientos disponibles";
             this.lblNoHayEspacio.Visible = false;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(465, 298);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 13);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "hora entrada";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(452, 340);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(35, 20);
-            this.textBox1.TabIndex = 40;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(513, 340);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(35, 20);
-            this.textBox2.TabIndex = 41;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(493, 338);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(14, 20);
-            this.label10.TabIndex = 42;
-            this.label10.Text = ":";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(465, 386);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 13);
-            this.label11.TabIndex = 43;
-            this.label11.Text = "hora salida";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(452, 426);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(35, 20);
-            this.textBox3.TabIndex = 44;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(493, 426);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(14, 20);
-            this.label12.TabIndex = 45;
-            this.label12.Text = ":";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(513, 429);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(35, 20);
-            this.textBox4.TabIndex = 46;
-            this.textBox4.Text = " ";
-            // 
             // rtbInfo
             // 
             this.rtbInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbInfo.Location = new System.Drawing.Point(216, 563);
+            this.rtbInfo.Location = new System.Drawing.Point(41, 567);
             this.rtbInfo.Name = "rtbInfo";
             this.rtbInfo.Size = new System.Drawing.Size(694, 96);
             this.rtbInfo.TabIndex = 47;
@@ -456,22 +382,24 @@ namespace ParcialParadigmas
             this.btnMostrarE.UseVisualStyleBackColor = true;
             this.btnMostrarE.Click += new System.EventHandler(this.btnMostrarE_Click);
             // 
+            // rtbEs
+            // 
+            this.rtbEs.Location = new System.Drawing.Point(560, 458);
+            this.rtbEs.Name = "rtbEs";
+            this.rtbEs.Size = new System.Drawing.Size(560, 96);
+            this.rtbEs.TabIndex = 50;
+            this.rtbEs.Text = "";
+            this.rtbEs.Visible = false;
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(1191, 675);
+            this.Controls.Add(this.rtbEs);
             this.Controls.Add(this.btnMostrarE);
             this.Controls.Add(this.rtbInfo);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.lblNoHayEspacio);
             this.Controls.Add(this.cheAfiliado);
             this.Controls.Add(this.btnAgregar);
@@ -537,16 +465,9 @@ namespace ParcialParadigmas
         public System.Windows.Forms.Button btnAgregar;
         public System.Windows.Forms.CheckBox cheAfiliado;
         public System.Windows.Forms.Label lblNoHayEspacio;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.RichTextBox rtbInfo;
         private System.Windows.Forms.Button btnMostrarE;
+        private System.Windows.Forms.RichTextBox rtbEs;
     }
 }
 

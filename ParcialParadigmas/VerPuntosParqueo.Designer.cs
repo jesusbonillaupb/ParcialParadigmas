@@ -29,17 +29,10 @@ namespace ParcialParadigmas
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.btnInicia = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(153, 90);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(541, 245);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
             // 
             // btnVolver
             // 
@@ -51,12 +44,31 @@ namespace ParcialParadigmas
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // btnInicia
+            // 
+            this.btnInicia.Location = new System.Drawing.Point(359, 407);
+            this.btnInicia.Name = "btnInicia";
+            this.btnInicia.Size = new System.Drawing.Size(75, 23);
+            this.btnInicia.TabIndex = 2;
+            this.btnInicia.Text = "ver";
+            this.btnInicia.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(153, 90);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(541, 245);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
             // VerPuntosParqueo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(888, 478);
+            this.Controls.Add(this.btnInicia);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.richTextBox1);
             this.Name = "VerPuntosParqueo";
@@ -67,8 +79,8 @@ namespace ParcialParadigmas
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnInicia;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

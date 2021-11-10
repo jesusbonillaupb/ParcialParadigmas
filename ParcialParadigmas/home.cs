@@ -302,8 +302,58 @@ namespace ParcialParadigmas
 
         private void btnMostrarE_Click(object sender, EventArgs e)
         {
-            VerPuntosParqueo verpu = new VerPuntosParqueo();
-            verpu.Show();
+            rtbEs.Show();
+            if (generar.Espacios[0].Disponible = true)
+            {
+                rtbEs.Text += "espacio1= " + generar.Espacios[0].DatosVehiculoYConductor + "\n";
+
+            }
+            if (generar.Espacios[1].Disponible = true)
+            {
+                rtbEs.Text += "espacio2= " + generar.Espacios[1].DatosVehiculoYConductor + "\n";
+
+
+            }
+            if (generar.Espacios[2].Disponible = true)
+            {
+                rtbEs.Text += "espacio3= " + generar.Espacios[2].DatosVehiculoYConductor + "\n";
+
+            }
+            if (generar.Espacios[3].Disponible = true)
+            {
+                rtbEs.Text += "espacio4= " + generar.Espacios[4].DatosVehiculoYConductor + "\n";
+
+            }
+            if (generar.Espacios[4].Disponible = true)
+            {
+                rtbEs.Text += "espacio5= " + generar.Espacios[4].DatosVehiculoYConductor + "\n";
+
+            }
+            if (generar.Espacios[5].Disponible = false)
+            {
+                rtbEs.Text += "espacio6= " + generar.Espacios[6].DatosVehiculoYConductor + "\n";
+
+            }
+            if (generar.Espacios[6].Disponible = true)
+            {
+                rtbEs.Text += "espacio7= " + generar.Espacios[7].DatosVehiculoYConductor + "\n";
+
+            }
+            if (generar.Espacios[7].Disponible = true)
+            {
+                rtbEs.Text += "espacio8= " + generar.Espacios[7].DatosVehiculoYConductor + "\n";
+
+            }
+            if (generar.Espacios[8].Disponible = true)
+            {
+                rtbEs.Text += "espacio9= " + generar.Espacios[8].DatosVehiculoYConductor + "\n";
+
+            }
+            //if (generar.Espacios[9].Disponible = true)
+            {
+                rtbEs.Text += "espacio10= " + generar.Espacios[9].DatosVehiculoYConductor + "\n";
+
+            }
         }
     }
 
