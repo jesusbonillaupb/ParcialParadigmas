@@ -40,8 +40,6 @@ namespace ParcialParadigmas
             this.btnE9 = new System.Windows.Forms.Button();
             this.btnE4 = new System.Windows.Forms.Button();
             this.btnE10 = new System.Windows.Forms.Button();
-            this.btnRotarIzquierda = new System.Windows.Forms.Button();
-            this.btnRotarDerecha = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,14 +66,14 @@ namespace ParcialParadigmas
             this.label12 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.rtbInfo = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMostrarE = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(380, 26);
+            this.label1.Location = new System.Drawing.Point(464, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(187, 24);
             this.label1.TabIndex = 0;
@@ -201,25 +199,6 @@ namespace ParcialParadigmas
             this.btnE10.Text = "10";
             this.btnE10.UseVisualStyleBackColor = false;
             this.btnE10.Click += new System.EventHandler(this.btnE10_Click_1);
-            // 
-            // btnRotarIzquierda
-            // 
-            this.btnRotarIzquierda.Location = new System.Drawing.Point(679, 426);
-            this.btnRotarIzquierda.Name = "btnRotarIzquierda";
-            this.btnRotarIzquierda.Size = new System.Drawing.Size(75, 23);
-            this.btnRotarIzquierda.TabIndex = 12;
-            this.btnRotarIzquierda.Text = "<--rotar";
-            this.btnRotarIzquierda.UseVisualStyleBackColor = true;
-            this.btnRotarIzquierda.Click += new System.EventHandler(this.btnRotarIzquierda_Click);
-            // 
-            // btnRotarDerecha
-            // 
-            this.btnRotarDerecha.Location = new System.Drawing.Point(894, 426);
-            this.btnRotarDerecha.Name = "btnRotarDerecha";
-            this.btnRotarDerecha.Size = new System.Drawing.Size(75, 23);
-            this.btnRotarDerecha.TabIndex = 13;
-            this.btnRotarDerecha.Text = "rotar-->";
-            this.btnRotarDerecha.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -467,14 +446,15 @@ namespace ParcialParadigmas
             this.rtbInfo.TabIndex = 47;
             this.rtbInfo.Text = "";
             // 
-            // button1
+            // btnMostrarE
             // 
-            this.button1.Location = new System.Drawing.Point(513, 455);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnMostrarE.Location = new System.Drawing.Point(683, 429);
+            this.btnMostrarE.Name = "btnMostrarE";
+            this.btnMostrarE.Size = new System.Drawing.Size(262, 23);
+            this.btnMostrarE.TabIndex = 48;
+            this.btnMostrarE.Text = "Mostrar puntos de parqueo";
+            this.btnMostrarE.UseVisualStyleBackColor = true;
+            this.btnMostrarE.Click += new System.EventHandler(this.btnMostrarE_Click);
             // 
             // home
             // 
@@ -482,7 +462,7 @@ namespace ParcialParadigmas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(1191, 675);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMostrarE);
             this.Controls.Add(this.rtbInfo);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label12);
@@ -508,8 +488,6 @@ namespace ParcialParadigmas
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnRotarDerecha);
-            this.Controls.Add(this.btnRotarIzquierda);
             this.Controls.Add(this.btnE10);
             this.Controls.Add(this.btnE4);
             this.Controls.Add(this.btnE9);
@@ -542,8 +520,6 @@ namespace ParcialParadigmas
         public System.Windows.Forms.Button btnE9;
         public System.Windows.Forms.Button btnE4;
         public System.Windows.Forms.Button btnE10;
-        public System.Windows.Forms.Button btnRotarIzquierda;
-        public System.Windows.Forms.Button btnRotarDerecha;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.ComboBox cmbTipo;
         public System.Windows.Forms.Label label3;
@@ -570,7 +546,7 @@ namespace ParcialParadigmas
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.RichTextBox rtbInfo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMostrarE;
     }
 }
 

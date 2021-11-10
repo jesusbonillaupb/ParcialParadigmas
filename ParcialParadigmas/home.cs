@@ -13,7 +13,9 @@ namespace ParcialParadigmas
     public partial class home : Form
     {
         Parqueadero generar = new Parqueadero();
-
+        Vehicle coneccionvehiculo = new Vehicle();
+        driver coneccionconductor = new driver();
+        ParkingSpot coneccionParking = new ParkingSpot();
         public home()
         {
             InitializeComponent();
@@ -28,19 +30,7 @@ namespace ParcialParadigmas
         
         private void btnRotarIzquierda_Click(object sender, EventArgs e)
         {
-            var btnX = btnE1.Location.X;
-            var btnY= btnE1.Location.Y;
-
-            this.btnE1.Location = new Point(btnE2.Location.X, btnE2.Location.Y);
-                this.btnE2.Location = new Point(btnE3.Location.X, btnE3.Location.Y);
-                this.btnE3.Location = new Point(btnE4.Location.X, btnE4.Location.Y);
-                this.btnE4.Location = new Point(btnE5.Location.X, btnE5.Location.Y);
-                this.btnE5.Location = new Point(btnE6.Location.X, btnE6.Location.Y);
-                this.btnE6.Location = new Point(btnE7.Location.X, btnE7.Location.Y);
-                this.btnE7.Location = new Point(btnE8.Location.X, btnE8.Location.Y);
-                this.btnE8.Location = new Point(btnE9.Location.X, btnE9.Location.Y);
-                this.btnE9.Location = new Point(btnE10.Location.X, btnE10.Location.Y);
-                this.btnE10.Location = new Point(btnX, btnY);
+           
 
         }
         
@@ -73,7 +63,8 @@ namespace ParcialParadigmas
         {
             txtIndetificacion.Clear();
         }
-
+        public string DatosVehiculo;
+        public string sa;
         public void btnAgregar_Click(object sender, EventArgs e)
         {
             if (generar.VerificarDisponibilidad() == false) {
@@ -86,6 +77,10 @@ namespace ParcialParadigmas
                 var mu = radMujer.Checked;
                 var a = "";
                 var afi = cheAfiliado.Checked;
+                var h = DateTime.Now.ToString("h:m tt");
+                var hx = DateTime.Now.TimeOfDay;
+                var fecha = DateTime.Now.ToString( "d/M ");
+
                 if (afi)
                 {
                     a = " y que esta afiliado";
@@ -101,11 +96,21 @@ namespace ParcialParadigmas
                     s = "femnino";
 
                 }
-                string DatosVehiculo = t + " de marca " + m + " con placa " + p;
-                string DatosConductor= " conductor con cc= " + di + " de sexo " + s + a;
-                string textosalida = DatosVehiculo + " y " + DatosConductor+ "\n";
-                rtbInfo.Text += textosalida;
+                //atributos vehiculo
+                coneccionvehiculo.Tipo = t;
+                coneccionvehiculo.Marca = m;
+                coneccionvehiculo.Placa = p;
+                coneccionvehiculo.HoraEntrada = h;
+                //atributos conductor
+                coneccionconductor.Indentificacion = di;
+                coneccionconductor.Sexo = s;
 
+                DatosVehiculo = t + " de marca " + m + " con placa " + p;
+                string DatosConductor = " conductor con cc= " + di + " de sexo " + s + a;
+                string DatosTiempo = "ingreso en " + fecha + " a las "+h;
+                string textosalida = DatosVehiculo + " y " + DatosConductor+ DatosTiempo+"\n";
+                rtbInfo.Text += textosalida;
+                
                 //if(espacios[1].disponibilidad=false{btnE1.color red}
 
                 txtPlaca.Clear();
@@ -125,43 +130,62 @@ namespace ParcialParadigmas
                             rtbInfo.Text += "ubicado en el estacionamiento  numero " + (generar.Espacios.IndexOf(x)+1)+ "\n";
                         }
                         if (generar.Espacios[0].Disponible == false){ 
-                            btnE1.BackColor = Color.Red; 
+                            btnE1.BackColor = Color.Red;
+                            generar.Espacios[0].DatosVehiculoYConductor = textosalida;
+                             sa=generar.Espacios[7].DatosVehiculoYConductor = textosalida;
+                            
                         }
                         if (generar.Espacios[1].Disponible == false)
                         {
                             btnE2.BackColor = Color.Red;
+                            generar.Espacios[1].DatosVehiculoYConductor = textosalida;
+                             sa = generar.Espacios[7].DatosVehiculoYConductor = textosalida;
                         }
                         if (generar.Espacios[2].Disponible == false)
                         {
                             btnE3.BackColor = Color.Red;
+                            generar.Espacios[2].DatosVehiculoYConductor = textosalida;
+                            sa = generar.Espacios[7].DatosVehiculoYConductor = textosalida;
                         }
                         if (generar.Espacios[3].Disponible == false)
                         {
                             btnE4.BackColor = Color.Red;
+                            generar.Espacios[3].DatosVehiculoYConductor = textosalida;
+                             sa = generar.Espacios[7].DatosVehiculoYConductor = textosalida;
                         }
                         if (generar.Espacios[4].Disponible == false)
                         {
                             btnE5.BackColor = Color.Red;
+                            generar.Espacios[4].DatosVehiculoYConductor = textosalida;
+                             sa = generar.Espacios[7].DatosVehiculoYConductor = textosalida;
                         }
                         if (generar.Espacios[5].Disponible == false)
                         {
                             btnE6.BackColor = Color.Red;
+                            generar.Espacios[5].DatosVehiculoYConductor = textosalida;
+                            sa = generar.Espacios[7].DatosVehiculoYConductor = textosalida;
                         }
                         if (generar.Espacios[6].Disponible == false)
                         {
                             btnE7.BackColor = Color.Red;
+                            generar.Espacios[6].DatosVehiculoYConductor = textosalida;
+                             sa = generar.Espacios[7].DatosVehiculoYConductor = textosalida;
                         }
                         if (generar.Espacios[7].Disponible == false)
                         {
                             btnE8.BackColor = Color.Red;
+                             sa=generar.Espacios[7].DatosVehiculoYConductor = textosalida;
                         }
                         if (generar.Espacios[8].Disponible == false)
                         {
                             btnE9.BackColor = Color.Red;
+                            sa = generar.Espacios[8].DatosVehiculoYConductor = textosalida;
                         }
                         if (generar.Espacios[9].Disponible == false)
                         {
                             btnE10.BackColor = Color.Red;
+                            generar.Espacios[8].DatosVehiculoYConductor = textosalida;
+                            sa = generar.Espacios[7].DatosVehiculoYConductor = textosalida;
                         }
                     }
                     
@@ -179,31 +203,38 @@ namespace ParcialParadigmas
         {
             generar.Espacios[0].Disponible = true;
             generar.VerificarDisponibilidad();
+           
             btnE1.BackColor = Color.Green;
             lblNoHayEspacio.Hide();
-            
+            var horafinal= DateTime.Now;
         }
 
         private void btnE2_Click_1(object sender, EventArgs e)
         {
             generar.Espacios[1].Disponible = true;
             generar.VerificarDisponibilidad();
+            
             btnE2.BackColor = Color.Green;
             lblNoHayEspacio.Hide();
+            var horafinal = DateTime.Now;
+            
         }
 
         private void btnE3_Click_1(object sender, EventArgs e)
         {
             generar.Espacios[2].Disponible = true;
             generar.VerificarDisponibilidad();
+            
             btnE3.BackColor = Color.Green;
             lblNoHayEspacio.Hide();
+            var horafinal = DateTime.Now;
         }
 
         private void btnE4_Click(object sender, EventArgs e)
         {
             generar.Espacios[3].Disponible = true;
             generar.VerificarDisponibilidad();
+            var horafinal = DateTime.Now;
             btnE4.BackColor = Color.Green;
             lblNoHayEspacio.Hide();
         }
@@ -211,16 +242,18 @@ namespace ParcialParadigmas
         private void btnE5_Click_1(object sender, EventArgs e)
         {
             generar.Espacios[4].Disponible = true;
-            generar.VerificarDisponibilidad();
+            var horafinal = DateTime.Now;
             btnE5.BackColor = Color.Green;
+            generar.Espacios[9].Disponible = true;
             lblNoHayEspacio.Hide();
         }
 
         private void btnE6_Click_1(object sender, EventArgs e)
         {
             generar.Espacios[5].Disponible = true;
-            generar.VerificarDisponibilidad();
+            
             btnE6.BackColor = Color.Green;
+            generar.Espacios[9].Disponible = true;
             lblNoHayEspacio.Hide();
 
         }
@@ -229,6 +262,7 @@ namespace ParcialParadigmas
         {
             generar.Espacios[6].Disponible = true;
             generar.VerificarDisponibilidad();
+            
             btnE7.BackColor = Color.Green;
             lblNoHayEspacio.Hide();
 
@@ -238,6 +272,7 @@ namespace ParcialParadigmas
         {
             generar.Espacios[7].Disponible = true;
             generar.VerificarDisponibilidad();
+            
             btnE8.BackColor = Color.Green;
             lblNoHayEspacio.Hide();
         }
@@ -246,6 +281,7 @@ namespace ParcialParadigmas
         {
             generar.Espacios[8].Disponible = true;
             generar.VerificarDisponibilidad();
+            
             btnE9.BackColor = Color.Green;
             lblNoHayEspacio.Hide();
         }
@@ -254,8 +290,20 @@ namespace ParcialParadigmas
         {
             generar.Espacios[9].Disponible = true;
             generar.VerificarDisponibilidad();
+            
             btnE10.BackColor = Color.Green;
             lblNoHayEspacio.Hide();
+        }
+
+        private void lblRetirado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMostrarE_Click(object sender, EventArgs e)
+        {
+            VerPuntosParqueo verpu = new VerPuntosParqueo();
+            verpu.Show();
         }
     }
 
@@ -284,7 +332,8 @@ namespace ParcialParadigmas
         
         public bool VerificarDisponibilidad() {
             bool nohaydisponibilidad=false;
-            for (int i = 0; i <= 9; i+=1)
+            
+            for(int i = 0; i <= 9; i+=1)
             {
                 if (Espacios[i].Disponible == true)
                 {
@@ -298,9 +347,7 @@ namespace ParcialParadigmas
             }
             return nohaydisponibilidad;
            
-            //sirvira para verificar la disponibilidad de un espacio
-            //ej: if espacio1 or espacio2 or espacio3 ... disponibilidad= true, seguir con el metodo AsignarParkingSpot()
-            //ej: if espacio1 or espacio2 or espacio3 ... disponibilidad= false envar mensaje "no hay espacios disponibles"
+   
 
         }
         public void AsignarParkingSpot()
@@ -328,39 +375,31 @@ namespace ParcialParadigmas
         public ParkingSpot()
         {
             this.Disponible=true;
-        }
+        } 
 
         public bool Disponible { get; set; }
         public int Numerodeestacionamiento { get; set; }
         public string DatosVehiculoYConductor{ get; set; }
 
-        public void IngresarVehiculo()
-        {
-            
-            
-            //sirvira para ingresar el vehiculo a un determinado estacionamiento y que el espacio de esta se marque en ocupado
-        }
-        public void RetirarrVehiculo()
-        {
-            //sirvira para ingresar el vehiculo a un determinado estacionamiento y que el espacio de esta se marque en libre
-        }
+        
+       
     }
     public class Vehicle
     {
-        string Tipo;
-        string Placa;
-        string Marca;
-        string HoraEntrada;
-        string HoraSalida;
+        public string Tipo { get; set; }
+        public string Placa { get; set; }
+        public string Marca { get; set; }
+        public string HoraEntrada { get; set; }
+        public string HoraSalida { get; set; }
         
     }
     public class driver
     {
-        int Indentificacion;
-        string Sexo;
-        bool Afiliado;
-       
-        
+        public string Indentificacion { get; set; }
+        public string Sexo { get; set; }
+        public bool Afiliado { get; set; }
+
+
     }
     //nota:depronto se pueda crear una clase tarifa la cual tenga atributos la hora de entrada, la hora de salida, el precio por minuto y el incremento
     //posibles metodos: calcular tarifa 
